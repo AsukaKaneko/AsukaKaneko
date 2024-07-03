@@ -1,0 +1,1140 @@
+@charset "utf-8";
+
+body {
+    max-width: 100%;
+    font-family: "Zen Kaku Gothic New", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+/* -------　header　------- */
+@media screen and (max-width: 768px) { /* < 768 SP*/
+    .panPC{
+        display: none;
+    }
+    .panSP{
+        display: block;
+    }
+
+    header {
+        height: 667px;
+        background-image: url(../images/topSP.jpg); 
+        position: relative;
+        padding: 0px;
+        max-width: 100%;
+    }
+    header h1 img { /* TAIWANロゴ位置です */
+        position: absolute;
+        top: 3px;
+        width: 111px;
+    }
+    header .placeLogo { /* 文字ロゴ位置です */
+        position: absolute;
+        top: 120px;
+        right: 88px;
+        width: 199px;
+        height: 372px;
+    }
+    header .snsIcon { /* SNSアイコン位置です */
+        position: absolute;
+        left: 20px;
+        bottom: 70px;
+        width: 39px;
+    }
+    header .snsIcon img {
+        margin-top: 20px;
+        width: 39px;
+    }
+    header .text { /* テキスト位置です */
+        position: absolute;
+        right: 0;
+        bottom: 8px;
+        width: 247px;
+        font-size: 12px;
+        font-weight: bold;
+        line-height: 19.2px;
+        color: #fff;
+        }
+    header .menuButton {
+        position: absolute;
+        width: 48px;
+        top: 4px;
+        right: 4px;
+    }
+
+/* -------　menu　------- */
+    #nav{
+        position:fixed;
+        top:0;
+        right: -120%;
+        width: 225px;
+        height: 100vh;
+        color: #fff;
+        background-color: rgba(0, 0, 0, 0.7);
+        z-index: 999;
+        transition: all 0.6s;
+    }
+    #nav .logo img {
+        width: 101px;
+        margin: 8px 0 84px 12px;
+    }
+    #nav .menuButton img {
+        position: absolute;
+        width: 48px;
+        top: 4px;
+        right: 4px;
+    }
+    #nav ul {
+        text-align: center;
+    }
+    #nav ul li {
+        font-size: 20px;
+        font-weight: bold;
+    }
+    #nav ul li:first-of-type {
+        font-size: 24px;
+        font-weight: bold;
+        margin-bottom: 60px;
+    }
+    #nav ul li a {
+        display: block;
+        padding: 10px;
+        text-decoration: 1px underline #fff;
+    }
+    #nav ul li a:hover {
+        text-decoration: underline;
+    }
+    #nav li:nth-child(2) {
+        margin-bottom: 40px;
+        text-transform: uppercase;
+    }
+    #nav li:nth-child(5) {
+        margin-bottom: 40px;
+    }
+    #nav li:nth-child(6) {
+        margin-bottom: 40px;
+        text-decoration: 1px underline #fff;
+    }
+    #nav li:nth-child(7) {
+        text-decoration: 1px underline #fff;
+    }
+
+    /*---  navを表示させる ---*/
+    #nav.show {
+        right: 0;
+    }
+}
+/* -------　loading sign　------- */
+
+.loading {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    top: 0px;
+    left: 0px;
+    background-image: url(../../images/loadingSP.gif);
+    background-repeat: no-repeat;
+    background-position: center center;
+    z-index: 999;
+    background-color: #007AB7;
+}
+/*---- footer ----*/
+footer { /*スマホ用のフッターのCSS*/
+        background-color: #007ab7;
+        color: #ffff;
+        margin: 0 auto;
+        text-align: center;
+}
+.footermenu {
+        font-size: 12px;
+        line-height: 12px;
+        width: 195px;
+        margin:20px auto;
+}
+footer nav li{
+        border-bottom: 1px solid #FFFFFF;
+        text-align: left;
+        margin-top: 8px;
+        padding-bottom: 8px;
+        padding-top:4px;
+}
+footer nav ul li a:hover { 
+        text-decoration: underline;
+     }
+.footerflag {
+        width: 32px;
+        height: 24px;
+        margin-top: 20px;
+ }
+.footerlogo img{
+        width:71px;
+        height: 28px;
+        float: left;
+        margin-right: 24px;
+        margin-left: 20px;
+        margin-top: 10px;
+        margin-bottom: 12px;
+ }
+.snsIconSpace img {
+        padding:8px;
+        padding-bottom:12px;
+}
+.footerImgSpace {
+        display: flex;
+        text-align: center;
+    }
+.snsIconSpace img:hover {
+        opacity: 0.5;
+        transform: translateY(-5px);
+        transition: transform 0.5s ease;
+}
+.Copyright {
+        border-top: 1px solid #03A9F4;
+        padding:12px auto;
+        font-size: 12px;
+        font-weight: normal;
+        line-height: 10px;
+        margin-bottom: 12px;
+}
+/* page top btn*/
+    .pagetop {
+        cursor:pointer;
+        height: 48px;
+        width: 48px;
+        position: fixed;
+        right: 4px;
+        bottom: 30px;
+        display: flex;
+        z-index: 50;
+    }
+    .snsIcon img:hover {
+        opacity: 0.5;
+        transform: translateY(-5px);
+        transition: transform 0.5s ease;
+    }
+
+/* -------　modal　------- */
+#modal .modalWrapper {
+    text-align: center;
+    margin: 0 auto;
+}
+
+.modalbg {
+    position: fixed; /* 画面全体に表示されるように固定 */
+    top: 0; /* 上端に位置 */
+    left: 0; /* 左端に位置 */
+    width: 100%; /* 画面の幅全体をカバー */
+    height: 100%; /* 画面の高さ全体をカバー */
+    background-color: rgba(0, 0, 0, 0.5); /* 半透明の黒背景 */
+    display: none; /* 初期状態では非表示 */
+    z-index: 100;/*page topボタンより手前に表示*/
+}
+
+.modalContainer {
+    display: none; /* 初期状態では非表示 */
+    position: fixed; /* 画面に固定 */
+    top: 50%; /* 画面の縦中央に配置 */
+    left: 50%; /* 画面の横中央に配置 */
+    transform: translate(-50%, -50%); /* 中央に表示するために位置を調整 */
+    width: 80%; /* 幅のデフォルト値 */
+    max-width: 600px; /* 幅の最大値 */
+    background-color: #fff; /* 白背景 */
+    padding: 20px; /* 内側の余白 */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); /* ボックスシャドウ（立体感を出す） */
+   z-index: 200;/*page topボタンとモーダル背景より手前に表示*/
+}
+
+.modalClose {
+    position: absolute; /* モーダル内で絶対位置 */
+    top: 10px; /* 上端からの距離 */
+    right: 10px; /* 右端からの距離 */
+    width: 24px; /* アイコンの幅 */
+    cursor: pointer; /* マウスポインターが指アイコンに変わる */
+    z-index: 200; /*pageトップボタンとモーダル背景より手前に表示*/
+}
+
+.modalPic {
+    width: 100%; /* 幅を全体に広げる */
+    height: auto; /* 高さを自動調整（縦横比を維持） */
+    z-index: 200; /*ページトップボタンとモーダル背景より手前に表示*/
+}
+
+/*--kokomadekyouyuububun--*/
+
+/*ぱんくずメニュー*/
+.pankuzuMenu{
+    border-bottom:1px solid #000000
+}
+.pankuzuMenu ul{
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    margin: 0;
+    padding: 1em;
+    color: #000000;
+    font-size: 16px;
+    text-align: left;
+}
+.pankuzuMenu li a:hover {
+    text-decoration: underline solid #6CBAD8;
+}
+
+  .border, .border01,.border02 {
+    width:223px;
+    text-align: center;
+}
+
+/*　観光名所　*/
+.Attraction {
+    text-align: center;
+}
+.sectionTitle { /* 背景画像つきタイトル部分*/
+    text-align: center;
+    background-image: url(../images/heading.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 220px;
+    height: 40px;
+    padding-top: 8px;
+    margin:0 auto 40px; 
+    top:-5px;
+}
+
+.sectionTitle h1::after {
+    content: "観光名所";
+    font-weight: normal;
+    font-size: 12px;
+    margin-left: 0.5rem;
+  } 
+.Attraction h1 {
+    font-family: "Zen Kaku Gothic New", sans-serif;
+    font-weight: bold;
+    text-align: center;
+}
+.Attraction h1 ::before {
+    content: url(../images/heading.svg); 
+    position: absolute;
+    bottom:-20px;
+    left:100px;
+} 
+.Attraction text {
+    text-align: left;
+}
+.Attarction h2 { /*安平老街 赤崁楼*/
+    font-family: "Zen Kaku Gothic New";
+    font-weight: bold;
+    text-align: center;
+    font-size: 24px;
+    letter-spacing: 0.3em;
+    margin-right: 84px;
+    margin-left: 84px;
+    margin-bottom: 24px;
+}
+.Seki { /* 赤崁楼*/
+    font-family: "Zen Kaku Gothic New";
+    font-weight: bold;
+    text-align: center;
+    font-size: 24px;
+    letter-spacing: 0.3em;
+    margin-right: 84px;
+    margin-left: 84px;
+    margin-bottom: 24px;
+}
+.Attmain { /* 安平のメイン画像 */
+    display: block;
+    width: 295px;
+    height: 221px;
+    object-fit: cover;
+    margin:0 auto; 
+}
+
+.textArea1 {
+    background-color: rgba(100, 201, 155, 0.2); /* #6CBAD8の透明度20％ */
+    font-weight: normal;
+    text-align: left;
+    font-size: 12px;
+    margin:20px 40px; 
+}
+.textArea1 .text {
+    padding: 8px 36px;
+    line-height: 19.2px;/* 行間*/
+}
+.AttSub {
+    display: flex;
+    justify-content: space-evenly;
+    margin:20px 20px;
+}
+.attSubPic01, .attSubPic02, .attSubPic03, .attSubPic04 { /*sub pic size */
+    width: 137.5px;
+    height: 150px;
+    object-fit: cover;
+}
+.textArea2 {
+    background-color: rgba(100, 201, 155, 0.2); /* #6CBAD8の透明度20％ */
+    font-weight: normal;
+    font-size: 11.5px;
+    width: 295px;
+     margin:20px 40px;
+    flex-wrap: nowrap; 
+    text-align: center;
+    line-height:auto;
+    letter-spacing: 0;
+}
+.time {
+    font-weight: bold;
+    line-height:12px;
+}
+
+.border {
+    border-bottom: 1px solid #000000;
+    width:223px;
+    margin: 40px auto;
+    text-align: center;
+}
+/* Gourmet */
+.Gourmet {
+    text-align: center;
+}
+.gTitle { /* 背景画像つきタイトル部分*/
+        text-align: center;
+        background-image: url(../images/heading.svg);
+        background-repeat: no-repeat;
+        background-size: contain;
+        width: 220px;
+        height: 40px;
+        padding-top: 8px;
+        margin:0 auto 40px; 
+        top:-5px;
+    }
+
+.gTitle h1::after {
+        content: "グルメ";
+        font-weight: normal;
+        font-size: 12px;
+        margin-left: 0.5rem;
+      } 
+ 
+.gourmetCon01 .text{
+    font-weight: normal;
+    width: 223px;
+    height: 81.6px;
+    line-height:19.2px;
+    font-size: 12px;
+    padding:12px 0px 12px 0px;
+    border-top: 1px solid #000000;
+    border-bottom: 1px solid #000000;
+    text-align: left;
+    margin: 60px auto;  
+ } 
+.gourmetCon .text {
+    width:223px;
+    height:76.8;
+    text-align: left;
+    margin:0 auto;
+}
+.Gourmet h1{
+    font-family: "Zen Kaku Gothic New", sans-serif;
+    font-weight: bold;
+    text-align: center;
+    font-size: 20px;
+}
+.Gourmet h2 {
+    font-weight: normal;
+    font-size: 32px;
+    text-align: center;
+}
+.Gourmet h3 {
+    font-weight: normal;
+    font-size: 16px;
+    text-align: center;
+}
+.GourmetPic {
+    width: 335px;
+    height: 130px;
+    margin: 8px auto;
+    padding:0;
+}
+.gourmetCon {
+    display: block;
+}
+.gourmetCon .button {
+    font-size: 12px;
+    justify-content: flex-end;
+    text-align: right; 
+    margin-right: 76px;  
+}
+.border02 {
+    margin:8px auto 20px;
+}
+.border01 {
+    margin: 0 auto;  
+}
+.gourmetCon .clickP{
+    display: block;
+    font-size: 18pt;
+    font-family: 'Noto Sans JP';
+    font-size: 14px;
+    font-weight: 300;
+    letter-spacing: .10em;
+    line-height: 14px;
+    margin:0 0 0 auto;
+    text-align: right;
+}
+/* pickup*/
+.pickupTitle{/* 背景画像つきタイトル部分*/
+    text-align: center;
+    background-image: url(../images/heading.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 220px;
+    height: 40px;
+    padding-top: 8px;
+    margin:0 auto 40px;  
+    top:-5px;
+}
+
+.pickupTitle h1::after {
+    content: "ピックアップ";
+    font-weight: normal;
+    font-size: 12px;
+    margin-left: 0.5rem;
+  } 
+.Pickup {
+    display: block;
+    margin: 0 auto;
+}
+.Pickup h1 {
+    width: 224px;
+    height: 40px;
+    font-size: 20px;
+    font-weight: bold;
+    margin:0 auto;
+}
+.Pickup h2 {
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 24px;
+    border-bottom: 1px solid #000000;
+    width: 223px;
+    padding-bottom: 12px;
+    margin:0 auto; 
+}
+.shirakawa .text{
+    font-weight: normal;
+    width: 223px;
+    height: 96px;
+    line-height:19.2px;
+    font-size: 12px;
+    margin:12px auto 20px;
+}
+.hotspPic {
+    display: block;
+    width:223px;
+    height:132px;
+    margin:20px auto; 
+}
+.hotSp .text {
+    width:223px;
+    height: 115.2px;
+    font-weight: normal;
+    font-size: 12px;
+    line-height:19.2px;
+    margin:20px auto;
+}
+.hotelSub {
+    display:flex;
+    justify-content: space-evenly;
+}
+.hotelPic{
+    width: 157.5px;
+    height: 81px;
+}
+.hotelSubText {
+    display: block;
+    margin:20px auto;
+    width: 223px;
+    height: 38.4px;
+    font-weight: normal;
+    font-size: 12px;
+}
+.Hasu img {
+    display: block;
+    width: 175px;
+    height: 122px;
+    margin: 0px auto;
+}
+.Hasu .text {
+    width:223px;
+    height: 57.6px;
+    font-weight: normal;
+    font-size: 12px;
+    display: block;
+    margin:20px auto;
+}
+
+@media screen and (min-width: 769px) { /* 769< */
+.panPC {
+    display: block;
+}
+.panSP {
+    display: none;
+}
+
+    /* -------　header　------- */
+
+header h1 img { /* TAIWANロゴ位置です */
+    position: absolute;
+    top: 3px;
+    width: 111px;
+}
+header .placeLogo { /* 文字ロゴ位置です */
+    position: absolute;
+    top: 120px;
+    right: 88px;
+    width: 199px;
+}
+header .snsIcon { /* SNSアイコン位置です */
+    position: absolute;
+    left: 20px;
+    bottom: 70px;
+    width: 39px;
+}
+header .snsIcon img {
+    margin-top: 20px;
+    width: 39px;
+}
+header .text { /* テキスト位置です */
+    position: absolute;
+    right: 0;
+    bottom: 8px;
+    width: 247px;
+    font-size: 12px;
+    font-weight: bold;
+    line-height: 19.2px;
+    color: #fff;
+}
+    header {
+        height: 768px;
+        padding: 0 83px; /* ---  header大枠のパディング  --- */
+    }
+    header h1 img { /* TAIWANロゴ位置です */
+        width: 133px;
+    }
+    header .placeLogo { /* 文字ロゴ位置です */
+        top: 94px;
+        left: 363px;
+        width: 300px;
+    }
+    header .snsIcon { /* SNSアイコン位置です */
+        left: 103px;
+        bottom: 80px;
+        width: 39px;
+    }
+    header .text { /* テキスト位置です */
+        right: 103px;
+        bottom: 20px;
+        width: 467px;
+        font-size: 20px;
+        font-weight: bold;
+        line-height: 32px;
+    }
+     /* -------　menu　------- */
+     #nav img, .menuButton {
+        display: none;
+    }
+    #nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        height: 54px;
+    }
+    #nav ul {
+        display: flex;
+    }
+    #nav li {
+        margin-left: 20px;
+        font-size: 24px;
+        font-weight: bold;
+        color: #fff;
+    }
+    #nav ul li a:hover {
+        text-decoration: underline;
+    }
+    #nav li:nth-child(1) {
+        display: none;
+    }
+  /* -------　modal　------- */
+.modalbg {
+    position: fixed; /* 画面全体に表示されるように固定 */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: none;
+} 
+.modalContainer {
+    display: none; /* 初期状態では非表示 */
+    position: fixed; /* 画面に固定 */
+    top: 50%; /* 画面の縦中央に配置 */
+    left: 50%; /* 画面の横中央に配置 */
+    transform: translate(-50%, -50%); /* 中央に表示するために位置を調整 */
+    width: 80%; /* 幅のデフォルト値 */
+    height: 90%;
+    max-width: 600px; /* 幅の最大値 */
+    background-color: #fff; /* 白背景 */
+    padding: 20px; /* 内側の余白 */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); /* ボックスシャドウ（立体感を出す） */
+    text-align: center; /* 中央揃えにする */
+}
+ 
+.modalWrapper {
+    display: flex;
+    justify-content: center; /* 水平方向の中央に配置 */
+    align-items: center; /* 垂直方向の中央に配置 */
+    height: 100%; /* モーダルの高さに合わせる */
+}
+
+.modalPic {
+    max-width: 100%; /* 画像がモーダルの幅を超えないようにする */
+    max-height: 100%; /* 画像がモーダルの高さを超えないようにする */
+    height: auto; /* 縦横比を維持 */
+}
+.modalClose {
+    position: absolute; /* モーダル内で絶対位置 */
+    top: 10px; /* 上端からの距離 */
+    right: 10px; /* 右端からの距離 */
+    width: 24px; /* アイコンの幅 */
+    cursor: pointer; /* マウスポインターが指アイコンに変わる */
+}
+}
+
+@media screen and (min-width:769px){ /* メディアクエリPC用 画面幅769以上に適応 */
+
+.border {
+    width: 480px;
+}
+.border01 {
+    width: 420px;
+    margin: left 60px;
+}
+header {
+    height: 768px;
+    background-image: url(../images/topPC.jpg); /* 置き換えください*/
+    position: relative;
+    padding: 0 20px;
+}   
+header nav {
+    float: right;
+    }
+header nav ul {
+        list-style: none;
+    }
+header h1 img { /* TAIWANロゴ */
+        position: absolute;
+        top: 20px;
+        width: 133px;
+        height: 54px;
+        margin-left: 103px;
+    }
+header .placeLogo { /* 文字ロゴ */
+    position: absolute;
+    top: 94px;
+    right: 704px;
+    left: 363px;
+    bottom:134px;
+    }
+header .placeLogo img{
+    width: 300px;
+    height: 539.82px;
+    object-fit: cover;
+    }
+header .text { /* テキスト位置 */
+    position: absolute;
+    right: 103px;
+    bottom: 20px;
+    width: 467px;
+    height: 96px;
+    font-size: 20px;
+    line-height: 32px;
+    color: #fff;
+    }
+header .snsIcon { /* SNSアイコン位置です */
+    left: 103px;
+    bottom: 80px;
+}
+.pankuzuMenu ul{
+    padding:20px 103px;
+    font-size: 20px;
+}
+
+.sectionTitle { /* 背景画像つきタイトル部分*/
+    width: 530px;
+    height: 96px;
+    padding-top: 24px;
+    margin-top: 20px;
+    margin-left: 103px;
+    top:-5px;
+}
+.sectionTitle h1{ /*文字の部分*/
+    width: 328px;
+    height: 48px;
+    font-size: 36px;
+    margin:0 auto;
+}
+.sectionTitle h1::after {
+    font-size: 20px;
+} 
+.Attarction h2{
+    display: block;
+    text-align: left;
+    font-size: 36px;
+    line-height: 36px;
+    letter-spacing: 0.3em;
+    }
+.anpin01 {
+    display: flex;
+    justify-content: space-between;
+    align-items:center;
+    margin-left: 7%;
+}
+.anpin02 {
+    display: flex;
+    justify-content: space-between;
+    align-items:center;
+    margin-left: 7%;
+}
+.Attmain { /*メイン画像のサイズ*/
+    width: 600px;
+    height: 304px;
+    margin: 0px;
+}
+.textArea1 {
+    width: 500px;
+    height: 304px;
+    text-align: left;
+    margin-right: 103px;
+}
+.textArea1 .text {
+    font-size: 20px;
+    font-weight: normal;
+    line-height: 1.6em;
+    margin: 20px auto;
+}
+.Seki {
+    display: block;
+    text-align: left;
+    font-size: 36px;
+    line-height: 36px;
+    letter-spacing: 0.3em;
+    }
+
+.AttSub {
+    display: flex;
+    justify-content: space-between;
+    width: 600px; 
+    margin: 0px;
+}
+.AttSub img {/*subpic size*/
+    width:290px;
+    height:167px;
+}
+.anpin02 .textArea1 {
+    width: 500px;
+    height: 160px;
+}
+
+.seki01 {
+    display: flex;
+    justify-content: space-between;
+    align-items:center;
+    margin-left: 7%;
+}
+.seki02 {
+    display: flex;
+    justify-content: space-between;
+    align-items:center;
+    margin-left: 7%;
+}
+.seki02 .textArea2 {
+    width: 500px;
+    height: 160px;
+    margin-left:0px;
+    margin-right: 103px;
+    padding: 20px 0px;
+    text-align: center;
+    font-size: 20px;
+    font-weight: normal;
+    line-height: 1.6em;
+    right: 5px;
+}
+
+
+.gTitle { /* 背景画像つきタイトル部分*/
+    width: 530px;
+    height: 96px;
+    padding-top: 24px;
+    margin-top: 20px;
+    margin-right: 103px;
+    top:-5px;
+}
+.gTitle h1{ /*文字の部分*/
+    width: 328px;
+    height: 48px;
+    font-size: 36px;
+    margin:0 auto;
+}
+.gTitle h1::after {
+    font-size: 20px;
+}
+.Gourmet .text {
+    width: 42px;
+    height: 96px;
+    font-size: 20px;
+    line-height: 1.6em;
+}
+.GourmetPic {/*グルメ部分の写真サイズ*/
+    width: 510px;
+    height:220px;
+}
+.Gourmet .text {
+    width: 510px;
+    height: 96px;
+    font-size: 20px;
+    margin-bottom: 40px;
+}
+.gourmetG{
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+.gourmetG .gourmetCon {
+    flex-basis: 40%;
+}
+.gourmetCon01 {
+    width: 420px;
+    border-bottom: 1px sorid #000000;
+    padding:60px;
+    margin-left: 5%;
+}
+.gourmetCon .button {
+    font-size: 20px;
+    justify-content: flex-start;
+    text-align: left; 
+    margin-left: 20px; ; 
+}
+.border02{
+    width:510px;
+}
+/*--Pick up --*/
+.pickupTitle { /* 背景画像つきタイトル部分*/
+    width: 530px;
+    height: 96px;
+    padding-top: 24px;
+    margin-top: 30px;
+    margin-left: 100px;
+    top:-5px;
+}
+.pickupTitle h1{ /*文字の部分*/
+    width: 328px;
+    height: 48px;
+    font-size: 36px;
+    font-weight: bold;
+    margin:0 auto;
+}
+.pickupTitle h1::after {
+    font-size: 20px;
+}
+.Pickup h2{
+    width: 420px;
+    font-size: 36px;
+    text-align: center;
+}
+.Pickup .text {
+    width: 500px;
+    height: 128px;
+    font-size: 20px;
+    line-height: 1.6em;
+}
+
+.shirakawa .text{
+    width: 420px;
+    height: 128px;
+    font-size: 20px;
+    margin-left: 109px;
+    padding:0;
+}
+.shirakawa h2 {
+    width: 420px;
+    padding: 24px;
+    margin: 20px 465px 40px 103px;
+}
+.hotSp {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+}
+.hotSp .text {
+    width:420px;
+    height: 192px;
+    padding:0;
+    margin:74px 60px;
+}
+.hotelSub {
+    display: flex;
+    justify-content: center;
+}
+.hotelSubText {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    width: 650px;
+    height: 20px;
+    font-size: 20px;
+    margin-top:80px;
+    margin-bottom:80px;
+    padding: 0;
+}
+.hotspPic{
+    width: 600px;
+    height: 300px;
+    margin:60px;
+}
+.hotelPic{
+    width:510px;
+    height: 214px;
+    margin:0px 60px;
+}
+.Hasu {
+    display:grid;
+    grid-template-rows: 30% 70%;
+    grid-template-columns: 55% 35%;
+    margin-left: 5%;
+}
+.Hasu .hasu01{
+    grid-row: 1/3;
+    grid-column: 1/2;
+}
+.Hasu .text {
+    grid-row: 1/2;
+    grid-column: 2/3;
+}
+.Hasu .hasu02{
+    grid-row: 2/3;
+    grid-column: 2/3;
+} 
+.Hasu .hasu01{
+    width: 600px;
+    height: 325px;
+}
+.Hasu .text {
+    width:420px;
+    height: 96px;
+    line-height: 1.62em;
+    padding:0;  
+    margin: 0px;
+}
+.Hasu .hasu02{
+    width: 420px;
+    height: 209px;
+    padding:0;
+    margin:10px 20px 10px 20px;
+    margin-left:0;
+}
+.modalPic {
+    width: 555px;
+    height:555px;
+    object-fit: cover;
+    margin:60px;
+}
+/* PC footer  */
+footer {
+    background-color: #007ab7;
+    color: #ffff;
+    margin: 0 auto;
+    text-align: center;
+}
+.footermenu {
+    font-size: 12px;
+    line-height: 12px;
+    width: 195px;
+    margin:20px auto;
+}
+footer nav li{
+    border-bottom: 1px solid #FFFFFF;
+    text-align: left;
+    margin-top: 8px;
+    padding-bottom: 8px;
+    padding-top:4px;
+}
+footer nav ul li a:hover { /**/
+    text-decoration: underline;
+}
+.footerflag {
+       width: 64px;
+       height: 48px;
+       margin-top: 20px;
+}
+   .footerContainer {
+       display: flex;  /*3列にするためにフレックスにしてます*/
+       justify-content: space-between;
+       align-items: center;
+       padding: 0 20px;
+       margin:0 auto;
+   }
+   .footerColumn {
+       flex: 1; /*　3カラムの幅を均一にしています*/
+       text-align: center;
+   }
+   .footerColumn .footerlogo {
+       display: flex;
+       flex-direction: column;
+       align-items: center;
+   }
+.footerlogo {
+       position:relative;
+       right:350px;
+       bottom: -50px;
+   }
+.snsIconSpace {
+       position:relative;
+       right:100px; /*全体が右に寄ったのを無理矢理ずらしてます */
+       bottom: -100px;
+   }
+.footerColumn .snsIcon {
+       display: flex;
+       justify-content: center;
+   }
+.footerlogo img {
+       width: 246px;
+       height:103px;
+   }
+.snsIconSpace  {
+       width: 183px;
+       height:32px;
+       justify-content: space-between;
+   }
+.footermenu {
+       margin-left:103px;
+   }
+   
+footer nav li{
+       text-align: left;
+   }
+.snsIconSpace img:hover {
+    opacity: 0.5;
+    transform: translateY(-5px);
+    transition: transform 0.5s ease;
+}
+.pagetop { 
+    cursor:pointer;
+    right: 20px;
+    bottom: 30px;
+    display: flex;
+    z-index: 2;
+    width: 100px;
+    height:100px;
+    }
+
+}
